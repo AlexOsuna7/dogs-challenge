@@ -1,4 +1,4 @@
-package com.example.dogschallenge.ui.theme
+package com.example.dogschallenge.presentation.theme
 
 import androidx.compose.material3.Typography
 import androidx.compose.ui.text.TextStyle
