@@ -36,8 +36,12 @@ android {
         sourceCompatibility = JavaVersion.VERSION_1_8
         targetCompatibility = JavaVersion.VERSION_1_8
     }
+    compileOptions {
+        sourceCompatibility = JavaVersion.VERSION_11
+        targetCompatibility = JavaVersion.VERSION_11
+    }
     kotlinOptions {
-        jvmTarget = "1.8"
+        jvmTarget = "11"
     }
     packaging {
         resources {
@@ -61,6 +65,9 @@ dependencies {
     implementation(libs.androidx.ui.graphics)
     implementation(libs.androidx.ui.tooling.preview)
     implementation(libs.androidx.material3)
+    implementation("androidx.constraintlayout:constraintlayout-compose:1.0.1")
+    implementation("androidx.compose.material:material-icons-extended-android:1.6.8")
+
 
     // ViewModel for Compose
     implementation(libs.androidx.lifecycle.viewmodel.compose)
@@ -99,6 +106,8 @@ dependencies {
     androidTestImplementation(libs.androidx.ui.test.junit4)
     debugImplementation(libs.androidx.ui.tooling)
     debugImplementation(libs.androidx.ui.test.manifest)
+    testImplementation("app.cash.turbine:turbine:1.1.0")
+
 }
 
 kapt {
